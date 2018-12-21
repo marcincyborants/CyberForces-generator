@@ -1,0 +1,232 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+}
+
+*,
+::after,
+::before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.h2,
+h2 {
+    font-size: 2rem;
+}
+
+h2 {
+    display: block;
+    -webkit-margin-before: 0.83em;
+    -webkit-margin-after: 0.83em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    margin-bottom: .5rem;
+}
+
+.form-group {
+    padding: 0px 0px 12px;
+}
+
+h3 {
+    display: block;
+    font-size: 1.625rem;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}
+
+.required:after {
+    content: " *";
+    color: red
+}
+
+.form-group {
+    margin-left: 2rem;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.col-sm-10 {
+    width: 83%;
+
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-image: none;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    position: absolute;
+    left: 470px;
+    width: 60%;
+}
+
+*,
+::after,
+::before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.ml {
+    margin-left: 3rem;
+}
+.mr {
+    margin-right: 3rem;
+} 
+.mt {
+    margin-top: 3rem;
+}
+.mb {
+    margin-bottom: 3rem;
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.form_section--button {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    -webkit-transition: background-color .15s ease-in-out, border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+    transition: background-color .15s ease-in-out, border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+    -o-transition: background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    transition: background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    transition: background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+}
+
+.form_section--button:hover {
+    background-color: #0069d9;
+}
+
+/* CODE */
+
+table p {
+    margin: 0;
+    font-family: "Helvetica" sans-serif;
+}
+table a {
+    text-decoration: none;
+}
+img.main-img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+}
+p.name {
+    /* font-family: heavy; */
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: bold;
+    color: #0A1C48;
+    margin: 0;
+}
+
+p.space {
+    font-size: 0;
+    height: 22px;
+}
+
+p.position {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: bold;
+    color: #0a69c6;
+    text-transform: uppercase;
+}
+p.number {
+    font-size: 12px;
+    line-height: 18px;
+}
+p.space--hr {
+    font-size: 0;
+    margin: 10px 0;
+    height: 0px;
+    width: 40px;
+    border: 1px solid #0A1C48;
+}
+
+p.logo {
+}
+
+p.logo img {
+    width: 100%;
+}
+p.space--small {
+    font-size: 0;
+    height: 10px;
+}
+
+p.company > span {
+    display: block;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+p.company .company-name {
+    font-weight: bold;
+}
+
+p.social {
+    line-height: 0px;
+    font-size: 0px;
+}
+p.social img {
+    margin-right: 20px;
+}
+
+p.info {
+    font-size: 10px;
+    line-height: 14px;
+    color: #9a9fac;
+}

@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'heavy';
+    src: url(https://testarmy.com/app/themes/testarmy/fonts/flexo-heavy-webfont.woff2) format('woff2');
+}
+@font-face {
+    font-family: 'medium';
+    src: url(https://testarmy.com/app/themes/testarmy/fonts/flexo-medium-webfont.woff2) format('woff2');
+}
+@font-face {
+    font-family: 'regular';
+    src: url(https://testarmy.com/app/themes/testarmy/fonts/flexo-regular-webfont.woff2) format('woff2');
+}
