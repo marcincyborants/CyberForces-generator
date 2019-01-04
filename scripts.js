@@ -21,7 +21,7 @@
               logoLink = "https://raw.githubusercontent.com/marcincyborants/CyberForces-generator/gh-pages/cyberforces_logo_dark.png";
             }
             $("#linkedin-social").attr("href", socialLink);
-            $("#logo_field").attr("href", logoLink);
+            $("#logo_field").attr("src", logoLink);
 
           } else {
             $("#" + fieldname).text(field.value);
