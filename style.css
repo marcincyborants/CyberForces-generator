@@ -123,3 +123,31 @@ label {
     height: 20rem;
     margin: 0 auto;
 }
+
+
+@media only screen and (max-width: 800px) {
+    .form-group {
+        width: 80%;
+    }
+}
+@media only screen and (max-width: 650px) {
+    .form-group {
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .form-group {
+        margin-bottom: 2rem;
+    }
+    .form-group > label:first-child {
+        display: block;
+        width: 100%;
+        text-align: left;
+        padding-right: none;
+    }
+    .form-group .form-control {
+        display: block;
+        width: 100%;
+        padding: 1rem;
+    }
+}
