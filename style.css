@@ -40,6 +40,9 @@ body {
 .text-align-center {
     text-align: center;
 }
+.position-rel {
+    position: relative;
+}
 
 /* Typography */
 h2 {
@@ -92,7 +95,7 @@ label {
     margin-right: 3rem;
 }
 
-.form_section--button {
+.button--blue {
     color: #fff;
     font-weight: 700;
     padding: .5rem 1rem;
@@ -103,11 +106,19 @@ label {
     transition: background-color .3s ease-in-out, border-color .15s ease-in-out;
 }
 
-.form_section--button:hover {
+.button--blue:hover {
     background-color: #0069d9;
     border: 1px solid #212529;
 }
-
+.copy-info {
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    background-color: #eee;
+    border-radius: .5rem;
+    font-weight: 700;
+    padding: .75rem 1rem;
+}
 /* CODE */
 #source_code {
     padding: 3rem;
@@ -122,4 +133,32 @@ label {
     width: 60rem;
     height: 20rem;
     margin: 0 auto;
+}
+
+
+@media only screen and (max-width: 800px) {
+    .form-group {
+        width: 80%;
+    }
+}
+@media only screen and (max-width: 650px) {
+    .form-group {
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .form-group {
+        margin-bottom: 2rem;
+    }
+    .form-group > label:first-child {
+        display: block;
+        width: 100%;
+        text-align: left;
+        padding-right: none;
+    }
+    .form-group .form-control {
+        display: block;
+        width: 100%;
+        padding: 1rem;
+    }
 }

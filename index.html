@@ -14,9 +14,8 @@
             <li>Zdjęcie należy wgrać np. na Google Photos czy https://pl.imgbb.com/ i wkleić URL do generatora.</li>
             <li>Najbezpieczniejszym i najpewniejszym rozwiązaniem, jest skorzystanie z url zdjęcia wgranego na
                 https://testarmy.com/team/ </li>
-            <li>Po wypełnieniu pól należy kliknąć "Generuj"</li>
-            <li>Po wygenerowaniu stopki, należy ją zaznaczyć i kliknąć "CTRL + C" (gmail nie akceptuje kodu html -
-                kopiujemy samą stopke razem ze zdjęciem)</li>
+            <li>Po wypełnieniu pól należy kliknąć "Generuj".</li>
+            <li>Po wygenerowaniu, kopiujemy zawartość poprzez kliknięcie przysisku "Kopiuj".</li>
             <li>Przechodzimy do ustawień skrzynki pocztowej</li>
             <li>W zakładce podpis wklejamy skopiowaną wcześniej treść</li>
             <li>Zapisujemy ustawienia</li>
@@ -53,16 +52,17 @@
                     required>
             </div>
             <div class="form-group">
-                    <label class="required">Logo</label>
-                    <label class="radio-label">
-                        <input type="radio" class="form-control--radio" name="brand" value="cyberforces" required checked> CyberForces
-                    </label>
-                    <label class="radio-label">
-                        <input type="radio" class="form-control--radio" name="brand" value="testarmy" required> TestArmy
-                    </label>
-                </div>
+                <label class="required">Generuj dla</label>
+                <label class="radio-label">
+                    <input type="radio" class="form-control--radio" name="brand" value="cyberforces" required checked>
+                    CyberForces
+                </label>
+                <label class="radio-label">
+                    <input type="radio" class="form-control--radio" name="brand" value="testarmy" required> TestArmy
+                </label>
+            </div>
             <div class="text-align-center mt mb">
-                <button type="submit" name="submit" class="form_section--button" id="button-submit">Generuj</button>
+                <button type="submit" name="submit" class="button--blue" id="button-submit">Generuj</button>
             </div>
         </form>
     </section>
@@ -97,11 +97,10 @@
                     </p>
 
                     <p class="number" id="phone_field" style="font-size: 12px;line-height: 18px; margin: 0;">
-                        Nr telefonu
+                        +(48) 666 666 666
                     </p>
 
                     <p class="space" style="font-size: 0;height: 22px;margin: 0;">
-                        123 456 789
                     </p>
 
                     <p class="logo" style="margin: 0;">
@@ -136,7 +135,8 @@
                             <img style="margin-right: 20px;" src="https://raw.githubusercontent.com/marcincyborants/CyberForces-generator/gh-pages/f.png"
                                 alt="Facebook">
                         </a>
-                        <a id="linkedin-social" href="https://www.linkedin.com/company/cyberforces/" target="_blank" style="text-decoration: none;">
+                        <a id="linkedin-social" href="https://www.linkedin.com/company/cyberforces/" target="_blank"
+                            style="text-decoration: none;">
                             <img src="https://raw.githubusercontent.com/marcincyborants/CyberForces-generator/gh-pages/in.png"
                                 alt="Linkedin">
                         </a>
@@ -162,6 +162,10 @@
         </table>
 
     </section>
+    <section class="container text-align-center mt">
+        <button id="copy-button" class="button--blue">Kopiuj</button>
+        <p class="copy-info">Skopiowano zawartość</p>
+    </section>
 
     <!-- SIGNATURE TEMPLATE END -->
 
@@ -171,8 +175,7 @@
         <textarea id="html_code" name="source_code_area"></textarea>
     </section>
 
-
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <script src="scripts.js"></script>
 </body>
