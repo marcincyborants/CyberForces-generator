@@ -1,228 +1,180 @@
 <!DOCTYPE html>
-<html lang="">
-    <head>
-        <meta charset="UTF-8">
-        <title>CyberForce e-mail footer generator</title>
-        <link rel="stylesheet" href="style.css">
+<html lang="pl">
 
-    </head>
-    <body>
-        <div class="container mt">
-            <h2 class="instruction_section--heading">Instrukcja obsługi aplikacji tworzącej stopkę do maila</h2>
-            <ol class="instruction_section--list">
-                <li>Zdjęcie należy wgrać np. na Google Photos czy https://pl.imgbb.com/ i wkleić URL do generatora.</li>
-                <li>Najbezpieczniejszym i najpewniejszym rozwiązaniem, jest skorzystanie z url zdjęcia wgranego na https://testarmy.com/team/ </li> 
-                <li>Po wypełnieniu pól należy kliknąć "Generuj"</li>
-                <li>Po wygenerowaniu stopki, należy ją zaznaczyć i kliknąć "CTRL + C"</li>
-                <li>Przechodzimy do ustawień skrzynki pocztowej</li>
-                <li>W zakładce podpis wklejamy skopiowaną wcześniej stronę</li>
-                <li>Zapisujemy ustawienia</li>
-                <li>Testujemy działanie wysyłając maila do koleżanki z pracy :)</li>
-            </ol>
-        </div>
-        <div class="container mt mb">
-            <h3 class="form_section-heading">Generator podpisu e-mail</h3>
-            <p class="form_section-paragraph">Informacje wprowadzone w formularzu niezbędne są do wygenerowania prawidłowego kodu html, który należy wkleić
-                w używanym kliencie pocztowym</p>
-            <form enctype="multipart/form-data" action="/" method="post" id="form-generator">
-                <div class="form-group row">
-                    <label for="name" class="col-sm-2 col-form-label required">Imię</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="name" aria-describedby="nameHelp" placeholder="Wprowadź imię" name="name" required>
-                    </div>
+<head>
+    <meta charset="UTF-8">
+    <title>Generator stopek dla CyberForces i TestArmy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="container mb">
+        <h2>Instrukcja obsługi aplikacji tworzącej stopkę do maila</h2>
+        <ol>
+            <li>Zdjęcie należy wgrać np. na Google Photos czy https://pl.imgbb.com/ i wkleić URL do generatora.</li>
+            <li>Najbezpieczniejszym i najpewniejszym rozwiązaniem, jest skorzystanie z url zdjęcia wgranego na
+                https://testarmy.com/team/ </li>
+            <li>Po wypełnieniu pól należy kliknąć "Generuj"</li>
+            <li>Po wygenerowaniu stopki, należy ją zaznaczyć i kliknąć "CTRL + C" (gmail nie akceptuje kodu html -
+                kopiujemy samą stopke razem ze zdjęciem)</li>
+            <li>Przechodzimy do ustawień skrzynki pocztowej</li>
+            <li>W zakładce podpis wklejamy skopiowaną wcześniej treść</li>
+            <li>Zapisujemy ustawienia</li>
+            <li>Testujemy działanie wysyłając maila do koleżanki z pracy :)</li>
+        </ol>
+    </section>
+
+    <section class="container mb">
+        <h2>Generator podpisu e-mail</h2>
+        <form id="form-generator" enctype="multipart/form-data" action="/" method="post">
+            <div class="form-group">
+                <label for="name" class="required">Imię</label>
+                <input type="text" class="form-control" id="name" aria-describedby="nameHelp" placeholder="Wprowadź imię"
+                    name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="surname" class="required">Nazwisko</label>
+                <input type="text" class="form-control" id="surname" aria-describedby="surnameHelp" placeholder="Wprowadź nazwisko"
+                    name="surname" required>
+            </div>
+            <div class="form-group">
+                <label for="position" class="required">Stanowisko</label>
+                <input type="text" class="form-control" id="position" aria-describedby="positionHelp" placeholder="Twoje stanowisko"
+                    name="position" required>
+            </div>
+            <div class="form-group">
+                <label for="phone" class="required">Nr telefonu</label>
+                <input type="text" class="form-control" id="phone" aria-describedby="phoneHelp" placeholder="Twój nr telefonu"
+                    name="phone" required>
+            </div>
+            <div class="form-group">
+                <label for="image_file" class="required">Zdjęcie</label>
+                <input type="text" class="form-control" id="image" name="image_social" placeholder="Adres www do zdjęcia profilu"
+                    required>
+            </div>
+            <div class="form-group">
+                    <label class="required">Logo</label>
+                    <label class="radio-label">
+                        <input type="radio" class="form-control--radio" name="brand" value="cyberforces" required checked> CyberForces
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" class="form-control--radio" name="brand" value="testarmy" required> TestArmy
+                    </label>
                 </div>
-                <div class="form-group row">
-                    <label for="surname" class="col-sm-2 col-form-label required">Nazwisko</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="surname" aria-describedby="surnameHelp" placeholder="Wprowadź nazwisko" name="surname"
-                            required>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="position" class="col-sm-2 col-form-label required">Stanowisko</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="position" aria-describedby="positionHelp" placeholder="Twoje stanowisko" name="position"
-                            required>
-                    </div>
-                </div>
-                <div class="form-group row">
-                        <label for="phone" class="col-sm-2 col-form-label required">Nr telefonu</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="phone" aria-describedby="phoneHelp" placeholder="Twój nr telefonu" name="phone"
-                                required>
-                        </div>
-                    </div>
-                <div class="form-group row">
-                    <label for="image_file" class="col-sm-2 col-form-label required">Zdjęcie</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control" id="image" name="image_social" placeholder="Adres www do zdjęcia profilu" required>
-                    </div>
-                </div>
-                <div class="text-align-center">
-                    <button type="submit" name="submit" class="form_section--button" id="button-submit">Generuj</button>
-                </div>
-            </form>
-        </div>
+            <div class="text-align-center mt mb">
+                <button type="submit" name="submit" class="form_section--button" id="button-submit">Generuj</button>
+            </div>
+        </form>
+    </section>
 
-        <hr class="mb">
+    <hr class="mt mb">
 
-        <div id="source_code">
-            <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-            <link href="https://raw.githubusercontent.com/marcincyborants/CyberForces-generator/master/fonts/flexo.css" rel="stylesheet">
+    <!-- SIGNATURE TEMPLATE -->
 
-            <table cellpadding="0" cellspacing="0" width="400">
-                <tr>
-                    <td width="80" valign="top" align="center">
-                        <img class="main-img" id="image_social_field" src="https://i.redd.it/xmulu1f6urt11.jpg" alt="Photo">
-                    </td>
-                    <td width="180" style="padding-left: 20px;">
-                        <p class="space--small"></p>
-                        <p class="name"><span id="name_field">Imię</span> <span id="surname_field">Nazwisko</span></p>
-                        <p class="space--hr"></p>
-                        <p class="position" id="position_field" style="font-family: heavy;">Stanowisko</p>
-                        <p class="number" id="phone_field">nr telefonu</p>
-                        <p class="space">606 281 274</p>
-                        <p class="logo"><img src="https://raw.githubusercontent.com/marcincyborants/CyberForces-generator/gh-pages/cyberforces_logo_dark.png" alt="CyberForces-logo"></p>
-                        <p class="space--small"></p>
-                        <p class="company">
-                            <span class="company-name">TestArmy Group S.A.</span>
-                            <span>ul. Petuniowa 9/5,</span>
-                            <span>53-238 Wrocław, Poland</span>
-                        </p>
-                        <p class="space--small"></p>
-                        <p class="social">
-                            <a href="https://twitter.com/test_army" target="_blank">
-                                <img src="https://raw.githubusercontent.com/marcincyborants/CyberForces-generator/gh-pages/tw.png" alt="Twitter">
-                            </a>
-                            <a href="https://www.facebook.com/testarmy/" target="_blank">
-                                <img src="https://raw.githubusercontent.com/marcincyborants/CyberForces-generator/gh-pages/f.png" alt="Facebook">
-                            </a>
-                            <a href="https://www.linkedin.com/company/cyberforces/" target="_blank">
-                                <img src="https://raw.githubusercontent.com/marcincyborants/CyberForces-generator/gh-pages/in.png" alt="Linkedin">
-                            </a>
-                        </p>
-                        <p class="space--small"></p>
-                    </td>
-                    <td width="auto"></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td colspan="2" style="padding-left: 20px;">
-                        <p class="info">NIP: 8992754194, REGON: 022426578, Numer KRS: 0000679700, Sąd Rejonowy dla Wrocławia-Fabrycznej, VI Wydział‚ Gospodarczy Krajowego Rejestru Sądowego Kapitał zakładowy: 123 000 PLN</p>
-                    </td>
-                </tr>
-            </table>
+    <section id="source_code">
 
+        <table cellpadding="0" cellspacing="0" width="400">
+            <tr>
+                <td width="80" valign="top" align="center">
+                    <img class="main-img" id="image_social_field" src="https://raw.githubusercontent.com/marcincyborants/CyberForces-generator/gh-pages/avatar.png"
+                        alt="Photo" style="border-radius: 50%; width: 80px; height: 80px; object-fit: cover;">
+                </td>
 
-            <!-- <table cellpadding="0" cellspacing="0" width="500">
-                <tr>
-                    <td  valign="bottom" align="left">
-                        <table style="
-                        margin-bottom: 10px;
-                        padding: 15px 0 0 0; clear:both;" cellpadding="0" cellspacing="0" width="100%">
-                            <td width="15">&nbsp;</td>
-                            <td valign="top" align="left" width="50%">
-                                <img width="80" alt="place for image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtIPfA_K_ekeXpgzZtJxQ4fU0HpWfSbyLkdEo3Pw40z-onw3Ji" id="image_social_field" style="width: 100%; max-width:90px; border-radius: 100%; margin-bottom:1rem; float: left; border: 2px solid #25368e;;
-                                margin-right: 16px;"
-                                   >
-                                <p style=" font-family: 'Roboto', sans-serif; color: #25378b; margin: 0; font-size: 18px; font-weight: 100; line-height: 21px;">
-                                    <span id="name_field">Marcin</span>
-                                    <strong style=" font-family: 'Roboto', sans-serif; color: #25378b; margin: 0; font-size: 18px; font-weight: bold; line-height: 21px;"
-                                        id="surname_field">Jurek</strong>
-                                </p>
-                            
-                                <p style="margin-bottom: 0px; font-family: 'Roboto', sans-serif; font-size: 14px; display:block; margin-top: 0.4rem;font-style: italic; color: #a6a6a6;    padding: 0 0 10px;"
-                                    id="position_field">Project Manager</p>
-                                    <div style="background: #25378b;
-                                    width: 20px;
-                                    height: 2px;
-                                    float: left;" id="name_field"></div>
-                                    <p style="margin-bottom: 0px; font-family: 'Roboto', sans-serif; font-size: 16px; display:block; margin-top: 0.4rem; color: #a6a6a6;"
-                                    id="phone_field">tel: 640-219-889</p>
-                            </td>
-                            <td align="right" valign="bottom">
-                                    <img style="margin-right: 30px;" src="https://raw.githubusercontent.com/jasztemborski/testuj-stopka-generator/master/testujlogo.png">
-                  </td>
-                        </table>
-                    </td>
+                <td width="180" style="padding-left: 20px;">
 
-                </tr>
-                <tr>
-                    <td valign="top" align="left" style="background-color: #25378b;" bgcolor="#25378b" height="20">&nbsp;</td>
-                </tr>
-                <tr>
-                    <td style="background-color: #25378b;" bgcolor="#25378b">
-                        <table align="left" width="320px" cellpadding="0" cellspacing="0" width="100%">
-                            <td valign="top" align="left" width="15">&nbsp;</td>
-                            <td valign="top" align="left">
-                                <table cellpadding="0" cellspacing="0" width="100%">
-                                    <tr>
-                                    </tr>
-                                    <tr>
-                                        <td height="20">&nbsp;</td>
-                                    </tr>
-                                    <tr>
-                                        <td valign="top" align="left">
-                                            <p style="margin:0;font-size:14px; font-family: 'Roboto', sans-serif;color:white;border-left: #939393 2px solid; line-height: 1.4;padding-left: 1em;">
-                                                <strong> TestArmy Group S.A. </strong>
-                                                <br> ul. Pe&#8288;tuniow&#8288;a 9&#8288;/5, 53-238 W&#8288;roclaw, Pol&#8288;and
-                                            </p>
-                                        </td>
-                                    </tr>
-                                </table>
+                    <p class="space--small" style="font-size: 0; height: 10px; margin: 0;">
+                    </p>
+
+                    <p class="name" style="font-size: 16px;line-height: 16px;font-weight: bold;color: #0a69c6;margin: 0;">
+                        <span id="name_field">Imię</span> <span id="surname_field">Nazwisko</span>
+                    </p>
+
+                    <p class="space--hr" style="font-size: 0; margin: 10px 0; height: 0px; width: 40px; border: 1px solid #0A1C48;">
+                    </p>
+
+                    <p class="position" id="position_field" style="font-size: 12px;line-height: 18px;color: #0A1C48;text-transform: uppercase; margin: 0;font-weight: bold;">
+                        Stanowisko
+                    </p>
+
+                    <p class="number" id="phone_field" style="font-size: 12px;line-height: 18px; margin: 0;">
+                        Nr telefonu
+                    </p>
+
+                    <p class="space" style="font-size: 0;height: 22px;margin: 0;">
+                        123 456 789
+                    </p>
+
+                    <p class="logo" style="margin: 0;">
+                        <img id="logo_field" src="https://raw.githubusercontent.com/marcincyborants/CyberForces-generator/gh-pages/cyberforces_logo_dark.png"
+                            alt="logo" style="width:100%;">
+                    </p>
+
+                    <p class="space--small" style="font-size: 0; height: 10px;margin: 0;">
+                    </p>
+                    <p class="company" style="margin: 0;">
+                        <span class="company-name" style="display: block; font-size: 12px; line-height: 16px;font-weight: bold;">
+                            TestArmy Group S.A.
+                        </span>
+                        <span style="display: block; font-size: 12px; line-height: 16px;">
+                            ul.Petuniowa 9/5,
+                        </span>
+                        <span style="display: block; font-size: 12px; line-height: 16px;">
+                            53-238 Wrocław, Poland
+                        </span>
+                    </p>
+
+                    <p class="space--small" style="font-size: 0; height: 10px;margin: 0;">
+                    </p>
+
+                    <p class="social" style="line-height: 0px; font-size: 0px;margin: 0;">
+
+                        <a href="https://twitter.com/test_army" target="_blank" style="text-decoration: none;">
+                            <img style="margin-right: 20px;" src="https://raw.githubusercontent.com/marcincyborants/CyberForces-generator/gh-pages/tw.png"
+                                alt="Twitter">
+                        </a>
+                        <a href="https://www.facebook.com/testarmy/" target="_blank" style="text-decoration: none;">
+                            <img style="margin-right: 20px;" src="https://raw.githubusercontent.com/marcincyborants/CyberForces-generator/gh-pages/f.png"
+                                alt="Facebook">
+                        </a>
+                        <a id="linkedin-social" href="https://www.linkedin.com/company/cyberforces/" target="_blank" style="text-decoration: none;">
+                            <img src="https://raw.githubusercontent.com/marcincyborants/CyberForces-generator/gh-pages/in.png"
+                                alt="Linkedin">
+                        </a>
+                    </p>
+
+                    <p class="space--small" style="font-size: 0; height: 10px;margin: 0;">
+                    </p>
+
+                </td>
+
+                <td width="auto"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan="2" style="padding-left: 20px;">
+                    <p class="info" style="font-size: 10px; line-height: 14px; color: #9a9fac; margin:0; text-align: justify;">
+                        NIP: 8992754194, REGON: 022426578, Numer KRS: 0000679700, Sąd Rejonowy dla
+                        Wrocławia-Fabrycznej, VI Wydział‚ Gospodarczy Krajowego Rejestru Sądowego Kapitał zakładowy:
+                        123 000 PLN
+                    </p>
+                </td>
+            </tr>
+        </table>
+
+    </section>
+
+    <!-- SIGNATURE TEMPLATE END -->
+
+    <hr class="mt mb">
+
+    <section class="container mb">
+        <textarea id="html_code" name="source_code_area"></textarea>
+    </section>
 
 
-                            </td>
-                        </table>
-                        <table align="right" width="160" cellpadding="0" cellspacing="0" width="100%">
-                            <td width="30">&nbsp;</td>
-                            <td valign="top" align="left">
-                                <a style=" text-decoration: none;" href="https://pl-pl.facebook.com/testujpl/" id="facebook_private_social_field">
-                                    <img style="background-color: #fff;
-                                    border: 1px solid #fff;
-                                    border-radius: 100%;
-                                    width: 26px;margin:2px 2px 0" alt='facebook icon' src="https://gitlab.com/jakub.asztemborski/generator-testuj/raw/master/fb.png">
-                                </a>
-                                <a style=" text-decoration: none;" href="https://www.linkedin.com/company/testuj-pl?originalSubdomain=pl" id="facebook_private_social_field">
-                                    <img style="background-color: #fff;
-                                    border: 1px solid #fff;
-                                    border-radius: 100%;
-                                    width: 26px; margin:2px 2px 0" alt='facebook icon' src="https://gitlab.com/jakub.asztemborski/generator-testuj/raw/master/in.png">
-                                </a>
-                                <a style=" text-decoration: none;" href="https://www.youtube.com/channel/UC5nfCVMCEhYjCgnUoufoLhw" id="facebook_private_social_field">
-                                    <img style="background-color: #fff;
-                                    border: 1px solid #fff;
-                                    border-radius: 100%;
-                                    width: 26px; margin:2px 2px 0" alt='facebook icon' src="https://gitlab.com/jakub.asztemborski/generator-testuj/raw/master/yt.png">
-                                </a>
-                                <br>
-                                <a style=" font-size: 14px; font-family: 'Roboto', sans-serif; color: #939393;     display: block;
-                               text-align:center;" href="https://www.testuj.pl">www.testuj.pl</a>
-                            </td>
-                            <td width="15">&nbsp;</td>
-                        </table>
-
-                    </td>
-                </tr>
-                <tr>
-                    <td valign="top" align="left" style="background-color: #25378b;" bgcolor="#25378b" height="20">&nbsp;</td>
-                </tr>
-                <tr>
-                    <td>
-                        <p id="optional_text_1_field" style=" text-align:center; color: #a6a6a6 ; font-size: 10px; font-family: 'Roboto', sans-serif;">NIP: 8992754194, REGON: 022426578, Numer KRS: 0000679700, Sąd Rejonowy dla Wroclawia-Fabrycznej,
-                            VI Wydział‚ Gospodarczy Krajowego Rejestru Sądowego Kapitał zakładowy: 123 000 PLN</p>
-                    </td>
-                </tr>
-            </table> -->
-        </div>
-
-        <hr class="mt mb">
-
-        <textarea style="margin-left:16px; " name="source_code_area" id="html_code" cols="100" rows="10"></textarea>
-
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-            crossorigin="anonymous"></script>
-        <script src="scripts.js"></script>
-    </body>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="scripts.js"></script>
+</body>
 
 </html>
