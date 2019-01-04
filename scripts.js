@@ -45,8 +45,8 @@
     $("#copy-button").on("click", function () {
       selectText("source_code");
       document.execCommand('copy');
-      $(".copy-info").fadeIn(1500, function() {
-        $(this).fadeOut(1500);
+      $(".copy-info").fadeIn(500, function() {
+        $(this).delay(2000).fadeOut(1500);
       });
     });
 
