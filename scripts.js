@@ -16,12 +16,20 @@
           } else if (fieldname.indexOf("brand") >= 0) {
             var socialLink = "https://www.linkedin.com/company/testarmy/";
             var logoLink = "https://raw.githubusercontent.com/marcincyborants/CyberForces-generator/gh-pages/testarmy_logo.png";
+            var footer = "NIP: 8992754194, REGON: 022426578, KRS: 0000679700, Sąd Rejonowy dla Wrocławia-Fabrycznej, VI Wydział‚ Gospodarczy Krajowego Rejestru Sądowego Kapitał zakładowy: 123 000 PLN";
+            var companyName = 'TestArmy Group S.A.';
+
             if (field.value == "cyberforces") {
               socialLink = "https://www.linkedin.com/company/cyberforces/";
               logoLink = "https://raw.githubusercontent.com/marcincyborants/CyberForces-generator/gh-pages/cyberforces_logo_dark.png";
+              footer = 'NIP: 8943103634, REGON: 0367113636, KRS: 0000674716, Sąd Rejonowy dla Wrocławia-Fabrycznej, VI Wydział‚ Gospodarczy Krajowego Rejestru Sądowego Kapitał zakładowy: 100 000 PLN';
+              companyName = 'TestArmy CyberForces Sp. z o.o.';
             }
+
             $("#linkedin-social").attr("href", socialLink);
             $("#logo_field").attr("src", logoLink);
+            $("#company-name").text(companyName);
+            $("#footer-info").text(footer);
 
           } else {
             $("#" + fieldname).text(field.value);
